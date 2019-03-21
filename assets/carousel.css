@@ -1,28 +1,32 @@
 .carousel-container{
+    min-width: 100%;
     width: 100%;
     margin: auto;
     position: relative;
+    overflow: hidden;
 }
 
 .carousel-slide{
     display: flex;
+    min-width: 100%;
     width: 100%;
     height: 500px;
 }
 
 .carousel-item{
+    width: 100%;
     min-width: 100%;
     height: 100%;
 }
 
 .crs-item1{
-    background-color: #0084ff;
+    background-color: #F05D5E;
 }
 .crs-item2{
-    background-color: #ffc400;
+    background-color: #272932;
 }
 .crs-item3{
-    background-color: #ff0000;
+    background-color: #0F7173;
 }
 
 #prevBtn{
@@ -56,18 +60,41 @@
 }
 
 .carousel-btn{
-    width: 7%;
+    position: relative;
+    width: 5%;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    padding: 1%;
+    padding: 2%;
 }
 
 .carousel-btn img{
-    transform: scale(2.5);
+    position: absolute;
 }
 
+#prevBtn img{
+    left: 20%;
+}
 #nextBtn img{
-    transform: scale(2.5) scaleX(-1);
+    right: 20%;
+    transform: scaleX(-1);
+}
+
+.carousel-item{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-item h3{
+    font-size: 2.5em;
+    margin-bottom: 1em;
+}
+
+.carousel-item p{
+    max-width: 60%;
+    text-align: center;
 }

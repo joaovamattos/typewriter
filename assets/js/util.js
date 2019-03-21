@@ -20,7 +20,7 @@ const nextBtn = document.querySelector('#nextBtn')
 
 //Counter
 let counter = 1
-const size = carouselItems[0].clientWidth
+let size = carouselItems[0].clientWidth
 
 carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)'
 
@@ -51,3 +51,13 @@ carouselSlide.addEventListener('transitionend', ()=>{
         carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)'   
     }
 })
+
+const resize = item => {
+carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)'
+size = carouselItems[0].clientWidth
+    item.style.width = '100%'
+}
+
+document.body.onresize = function() {
+    carouselItems.forEach(resize)
+};
