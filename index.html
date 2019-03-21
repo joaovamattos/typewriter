@@ -5,28 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="assets/style.css">
-    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet"> 
+    <link rel="stylesheet" href="assets/carousel.css">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet"> <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.0/css/all.css" integrity="sha384-Mmxa0mLqhmOeaE8vgOSbKacftZcsNYDjQzuCOm6D02luYSzBG8vpaOykv9lFQ51Y" crossorigin="anonymous">
     <title>TypeWriter</title>
 </head>
 <body>
     <div class="container">
         <h1>A maneira mais fácil de se criar um evento!</h1>
     </div>
+    <div class="carousel-container">
+        <div class="carousel-slide">
+            <div class="carousel-item crs-item3" id="lastClone"><p>Título 3</p></div>
+            <div class="carousel-item crs-item1"><p>Título 1</p></div>
+            <div class="carousel-item crs-item2"><p>Título 2</p></div>
+            <div class="carousel-item crs-item3"><p>Título 3</p></div>
+            <div class="carousel-item crs-item1" id="firstClone"><p>Título 1</p></div>
+        </div>
+        <div class="carousel-btn" id="prevBtn"><img src="assets/images/baseline-arrow_back_ios-24px.svg"></div>
+        <div class="carousel-btn" id="nextBtn"><img src="assets/images/baseline-arrow_back_ios-24px.svg" ></div>
+    </div>
 </body>
-
-<script>
-
-    function typeWrite(elemento) {
-        const textoArray = elemento.innerHTML.split('');
-        elemento.innerHTML = '';
-        textoArray.forEach((letra, i ) => {
-            setTimeout( () => { elemento.innerHTML += letra; }, 75 * i)
-        });
-    }
-
-    const titulo = document.querySelector('h1');
-    typeWrite(titulo);
-    
-</script>
+<script src="assets/js/util.js"></script>
 
 </html>
