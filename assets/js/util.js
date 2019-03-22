@@ -5,10 +5,16 @@ function typeWrite(elemento) {
     textoArray.forEach((letra, i ) => {
         setTimeout( () => { elemento.innerHTML += letra; }, 75 * i)
     });
+    setTimeout(function() { 
+        const paragrafo = document.querySelector('p');
+        paragrafo.style.opacity = '1';
+    }, 3000)
 }
 
 const titulo = document.querySelector('h1');
 typeWrite(titulo);
+
+
 
 //---carousel---
 const carouselSlide = document.querySelector('.carousel-slide')
